@@ -4,6 +4,7 @@ package com.example.bankingapp.models;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class BankAccount {
     private double balance = 1000.00;
     private List<String> transactions = new ArrayList<>();
