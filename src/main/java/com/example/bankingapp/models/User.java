@@ -1,3 +1,6 @@
+/**
+ * Modellklasse zur Repräsentation eines Benutzers mit Benutzernamen und Passwort.
+ */
 package com.example.bankingapp.models;
 
 

@@ -1,3 +1,7 @@
+/**
+ * Controller für die Dashboard-Ansicht der Banking-App.
+ * Ermöglicht Transaktionen wie Einzahlung, Auszahlung und zeigt den Kontostand an.
+ */
 package com.example.bankingapp.controllers;
 
 
@@ -16,10 +20,12 @@ public class DashboardController {
         updateBalance();
     }
 
+    /** Aktualisiert die Anzeige des Kontostandes */
     private void updateBalance() {
         balanceLabel.setText("$" + String.format("%.2f", BankService.getAccount().getBalance()));
     }
 
+    /** Führt eine Einzahlung aus und aktualisiert den Kontostand */
     @FXML
     private void viewBalance() {
         updateBalance();
@@ -33,6 +39,8 @@ public class DashboardController {
         transactionArea.appendText("Deposited $" + amount + "\n");
     }
 
+
+    /** Führt eine Auszahlung aus und aktualisiert den Kontostand oder gibt Fehlermeldung bei unzureichendem Guthaben */
     @FXML
     private void withdrawMoney() {
         double amount = Double.parseDouble(amountField.getText());

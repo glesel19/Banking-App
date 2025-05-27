@@ -1,3 +1,6 @@
+/**
+ * Serviceklasse, die Zugriff auf das Bankkonto bietet.
+ */
 package com.example.bankingapp.services;
 
 

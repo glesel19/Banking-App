@@ -1,3 +1,8 @@
+/**
+ * Serviceklasse für die Authentifizierung von Benutzern.
+ * Führt eine einfache Prüfung von Benutzername und Passwort durch.
+ */
+
 package com.example.bankingapp.services;
 
 import com.example.bankingapp.models.User;

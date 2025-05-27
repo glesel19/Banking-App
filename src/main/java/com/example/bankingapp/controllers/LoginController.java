@@ -1,3 +1,7 @@
+/**
+ * Controller für die Login-Ansicht der Banking-App.
+ * Verwaltet den Anmeldeprozess und lädt das Dashboard bei erfolgreicher Anmeldung.
+ */
 package com.example.bankingapp.controllers;
 
 import javafx.fxml.FXML;
@@ -12,6 +16,8 @@ public class LoginController {
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
 
+
+    /** Verarbeitet Login-Daten und leitet bei erfolgreicher Anmeldung zum Dashboard weiter */
     @FXML
     private void handleLogin() {
         String user = usernameField.getText();
