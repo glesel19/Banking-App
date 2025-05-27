@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.bankingapp.controllers.DashboardController"
+            stylesheets="@dashboard.css"
+            styleClass="root">
+
+    <top>
+        <Label text="Bank Dashboard" styleClass="title" BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER" styleClass="vbox">
+            <Label fx:id="balanceLabel" text="Balance: $0" styleClass="balance"/>
+
+            <TextField fx:id="amountField" promptText="Enter amount" styleClass="text-field"/>
+
+            <Button fx:id="viewBalanceButton" text="View Balance" onAction="#viewBalance" styleClass="button"/>
+
+            <HBox spacing="10" alignment="CENTER" styleClass="hbox">
+                <Button fx:id="depositButton" text="Deposit" onAction="#depositMoney" styleClass="button"/>
+                <Button fx:id="withdrawButton" text="Withdraw" onAction="#withdrawMoney" styleClass="button"/>
+            </HBox>
+
+            <Button fx:id="viewTransactionsButton" text="View Transactions" onAction="#viewTransactions" styleClass="button"/>
+            <Button fx:id="logoutButton" text="Logout" onAction="#logout" styleClass="button"/>
+
+            <TextArea fx:id="transactionArea" prefHeight="150" editable="false" styleClass="text-area"/>
+
+            <HBox spacing="10" alignment="CENTER_LEFT" styleClass="hbox">
+                <TextField fx:id="searchField" promptText="Suche nach Beschreibung oder Betrag..." styleClass="text-field"/>
+                <ComboBox fx:id="filterComboBox" styleClass="combo-box">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Alle"/>
+                            <String fx:value="Einzahlung"/>
+                            <String fx:value="Auszahlung"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+
+            <TableView fx:id="transactionTable" prefHeight="400" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="typeColumn" text="Typ" styleClass="table-column"/>
+                    <TableColumn fx:id="amountColumn" text="Betrag" styleClass="table-column"/>
+                    <TableColumn fx:id="descriptionColumn" text="Beschreibung" styleClass="table-column"/>
+                    <TableColumn fx:id="dateColumn" text="Datum" styleClass="table-column"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
