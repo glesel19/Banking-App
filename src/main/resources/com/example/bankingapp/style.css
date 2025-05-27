@@ -1,0 +1,115 @@
+/* === GLOBAL === */
+.root {
+    -fx-background-color: white;
+    -fx-padding: 30;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.label {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+.title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #fdd835; /* gelb */
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 20 0;
+    -fx-alignment: center;
+}
+
+.balance {
+    -fx-font-size: 20px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+/* === TEXT INPUTS === */
+TextField, PasswordField {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+    -fx-background-color: #f7f7f7;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 12;
+}
+
+TextArea {
+    -fx-font-size: 13px;
+    -fx-background-color: #f7f7f7;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: black;
+    -fx-padding: 8;
+}
+
+/* === BUTTONS === */
+.button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 220px;
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #fdd835; /* gelb beim Hover */
+    -fx-text-fill: black;
+}
+
+/* === LAYOUTS === */
+VBox, HBox {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+TableView {
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #fdd835;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 30px;
+    -fx-border-color: black transparent black transparent;
+}
+
+.table-row-cell {
+    -fx-font-size: 13px;
+    -fx-padding: 6 8;
+}
+
+/* === FORMS === */
+.form-title {
+    -fx-font-size: 22px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+/* === CUSTOM STYLES === */
+.yellow-text {
+    -fx-text-fill: #fdd835;
+}
+
+.black-bg {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.rounded {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
