@@ -1,4 +1,5 @@
 /**
+ * @author Enes Haxhaja
  * Modellklasse zur Repräsentation eines Benutzers mit Benutzernamen und Passwort.
  */
 package com.example.bankingapp.models;
@@ -10,6 +11,9 @@ public class User {
 
     private String password;
 
+    /**
+     *  @param: username und password
+     */
     public User(String username, String password) {
         this.username = username;
         this.password = password;

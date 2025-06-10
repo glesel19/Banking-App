@@ -1,4 +1,5 @@
 /**
+ * @author Enes Haxhaja
  * Serviceklasse für die Authentifizierung von Benutzern.
  * Führt eine einfache Prüfung von Benutzername und Passwort durch.
  */
@@ -11,7 +12,11 @@ public class AuthService {
     private static User loggedInUser;
 
 
-
+/**
+* @param: username und password
+* @return true or false
+*
+*/
     public static boolean login(String username, String password) {
         // Mock check
         if (username.equals("admin") && password.equals("1234")) {
@@ -25,4 +30,5 @@ public class AuthService {
         return loggedInUser;
     }
 }
+
 
